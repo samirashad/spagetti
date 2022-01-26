@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spagetti</title>
+    <style>
+      body {
+        background: #202124;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        border: 1px solid blue;
+        color: white;
+        background: blue;
+        max-width: 100%;
+        margin: 0px auto;
+        padding: 10px 15px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+      }
+      h2 {
+        text-align: center;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 500px;
+        padding: 30px 20px;
+        border: none;
+        border-radius: 20%;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 40px auto 0 auto;
+        background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+        padding: 20px 10px;
+      }
+      .heading {
+        font-weight: bold;
+        color: red;
+        font-size: 24px;
+      }
+      button {
+        display: block;
+        margin: 25px auto 10px;
+        text-align: center;
+        padding: 10px 15px;
+        font-size: 40px;
+        font-weight: bold;
+        border-radius: 20%;
+        border: none;
+        transition: all 200ms ease-in-out;
+        border: 1px solid black;
+      }
+      button:hover {
+        color: white;
+        background-color: rosybrown;
+      }
+      ul {
+        line-height: 30px;
+      }
+      .cook {
+        list-style: none;
+        padding-inline-start: 20px;
+      }
+      .footer {
+        text-align: center;
+        opacity: 70%;
+        font-size: 12px;
+      }
+      a {
+        color: red;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Spagetti and Meat balls</h1>
+      <h2>It's a great meal for everyone!</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/023/283/original/tools_meatballs9687.jpg?1640019318"
+      />
+
+      <span class="heading"> Ingredients</span>
+      <hr />
+      <ul>
+        <li>1 pound spaghetti</li>
+        <li>Salt, for pasta water</li>
+        <li>1 1/4 pounds ground sirloin</li>
+        <li>2 teaspoons Worcestershire sauce, eyeball it</li>
+        <li>1 egg, beaten</li>
+        <li>1/2 cup Italian bread crumbs, a couple of handfuls</li>
+        <li>1/4 cup grated Parmesan, Parmigiano-Reggiano or Romano cheese</li>
+        <li>2 cloves garlic, chopped</li>
+        <li>2 tablespoons extra-virgin olive oil, 2 turns of the pan</li>
+        <li>1/2 teaspoon crushed red pepper flakes</li>
+        <li>4 cloves garlic, crushed or chopped</li>
+      </ul>
+      <span class="heading"> How to cook</span>
+      <hr />
+      <ul class="cook">
+        <li>1- Preheat oven to 425 degrees F.</li>
+        <li>
+          2- Place a large pot of water on to boil for spaghetti. When it boils,
+          add salt and pasta and cook to al dente.
+        </li>
+        <li>
+          3- Mix beef and Worcestershire, egg, bread crumbs, cheese, garlic,
+          salt and pepper. Roll meat into 1 1/2 inch medium-sized meatballs and
+          place on nonstick cookie sheet or a cookie sheet greased with
+          extra-virgin olive oil. Bake balls 10 to 12 minutes, until no longer
+          pink.
+        </li>
+        <li>
+          4- Heat a deep skillet or medium pot over moderate heat. Add oil,
+          crushed pepper, garlic and finely chopped onion. Saute 5 to 7 minutes,
+          until onion bits are soft. Add beef stock, crushed tomatoes, and
+          herbs. Bring to a simmer and cook for about 10 minutes.
+        </li>
+      </ul>
+      <button>Order</button>
+      <p class="footer">
+        This page is coded by
+        <a href="https://www.linkedin.com/in/samira-shad/" target="_blank"
+          >samira shad</a
+        >
+      </p>
+    </div>
+    <script>
+      let orderButton = document.querySelector("button");
+      orderButton.addEventListener("click", order);
+      function order() {
+        let name = prompt("Waht is your name?");
+        let number = prompt("How many do you want to order?");
+        if ((name !== "") & (number !== "")) {
+          alert(
+            "Thank you " +
+              name +
+              " for your order! We will deliver " +
+              number +
+              " Spagetti"
+          );
+        } else {
+          alert(
+            " We cannot take your order.You have not give us enough information."
+          );
+        }
+      }
+    </script>
+  </body>
+</html>
